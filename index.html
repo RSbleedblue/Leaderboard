@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Leaderboard</title>
+</head>
+<body>
+    <!-- leaderboard Container -->
+    <div class="flex w-[90%] flex-col items-center gap-0 h-[690px] rounded-xl ml-[4%] m-4 p-4">
+        <h1 class="text-3xl textColor font-semibold">RANKS</h1>
+        <!-- Top Ranks -->
+        <div class="flex  w-[75%] h-[35%] justify-center">
+            <!-- card -->
+            <div class = "rounded-xl w-[20%] h-[90%] m-3">
+
+                <img src="assets/legend.png">
+            </div>
+            
+            <div class = "rounded-xl w-[20%] h-[90%] m-3">
+                <img src="assets/diamond.png">
+            </div>
+            
+            <div class = "rounded-xl w-[20%] h-[90%] m-3">
+                <img src="assets/gold.png">
+            </div>
+            
+            <div class = "rounded-xl  w-[20%] h-[90%] m-3">
+                <img src="assets/silver.png">
+            </div>
+        </div>
+        <!-- Add a Player -->
+        <h2 class="text-2xl font-semibold textColor">ADD PLAYER</h2>
+        <div class="flex w-[80%] h-[15%] justify-center items-center">
+                <input class="h-[20%] m-2 p-5 border border-black border-dotted rounded-xl items-center" id = "playerName" placeholder="Player Name"/>
+                <input class="h-[20%] m-2 p-5 border border-black border-dotted rounded-xl items-center" id = "scorePlayer" type="number", placeholder="Score"/>
+                <button class="rounded-xl bgColor text-white w-20 h-10 m-2" onclick="feedData()">ADD</button>
+        </div>
+        <!-- LeaderBoard Table -->
+        <div class="relative overflow-x-auto sm:rounded-lg w-[60%] max-h-[300px] m-0">
+            <table class="w-full text-sm text-left rtl:text-right text-white dark:text-gray-200 rounded-xl">
+                <thead class="text-l bgColorTable uppercase ">
+                    <tr>
+                        <th scope="col" class="px-6 py-3">
+                            Name
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Rank
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Score
+                        </th>
+                        <th scope="col" class="px-6 py-3 ">
+                            Action
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="shadow-lg">
+                        <th scope="row" class="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
+                            <img class="w-10 h-10 rounded-full shadow-lg" src="assets/legend.png" alt="Jese image">
+                            <div class="ps-3">
+                                <div class=" font-semibold">Neil Sims</div>
+                            </div>  
+                        </th>
+                        <td class="px-6 py-4">
+                            Legend
+                        </td>
+                        <td class="px-6 py-4 ">
+                            <div class="flex items-center">
+                                1000 pts
+                            </div>
+                        </td>
+                        <td class="px-6 py-4 flex flex-row items-center">
+                            <button class="inline-flex items-center justify-center p-1 text-sm font-medium h-6 w-6 text-gray-500 bg-white border border-gray-300 rounded-full focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700" type="button" >
+                                <span class="sr-only">Quantity button</span>
+                                <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 2">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h16"/>
+                                </svg>
+                            </button>
+                            <button class="inline-flex items-center justify-center h-6 w-6 p-1 ms-3 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-full focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700" type="button">
+                                <span class="sr-only">Quantity button</span>
+                                <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
+                                </svg>
+                            </button>    
+                        </td>
+                    </tr>
+                 </tbody>
+        </div>
+    </div>
+ </div>
+ <script src = "script.js"></script>
+    
+</body>
+</html>
