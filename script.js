@@ -10,7 +10,6 @@ function feedData(){
         addToLeaderboard();
     }
     else{
-        alert("Score is not valid");
         return;
     }
 }
